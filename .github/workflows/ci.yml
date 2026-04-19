@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI Pipeline # GitHub Actions 워크플로우 이름
 
 on:
   push:
@@ -18,3 +18,7 @@ jobs:
       run: |
         echo "인프라 설정 파일 확인 완료"
         ls -la
+
+    - name: Docker Compose 문법 확인
+      run: |
+        docker compose config
